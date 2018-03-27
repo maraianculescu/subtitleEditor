@@ -1,0 +1,25 @@
+public interface TimestampTransformer {
+    ArrayList<String> splitTimestampIntoTokens(String timestamp);
+    String transformHoursToMs(String hourToken);
+    String transformMinutesToMs(String minutesToken);
+    String transformSecondsToMs(String minutesToken);
+    Integer returnTimestampInMs();
+}
+
+////////////////////////////////////////////////////////////////////////////
+
+public class TimestampTransformerImpl implements TimestampTransformer {
+
+    //splits the timestamp  = hh:mm:ss,ms into [hh,mm,ss,ms]
+    String[] splitTimestampIntoTokens(String timestamp) {
+        String delims = "[.,]+";
+        String[] tokens = employee.split(delims);
+        return tokens;
+    }
+
+    String transformHoursToMs(String hourToken){
+        int h = Integer.parseInt(hourToken);
+
+    }
+
+}
